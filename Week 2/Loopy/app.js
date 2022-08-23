@@ -58,13 +58,13 @@
 // let whole = Math.round(sum / count)
 // console.log(`Average number is: ${whole}`);
 
-// num = parseInt(prompt("How many numbers?"));
+// num = parseInt(prompt("How many numbers do you want to input?"));
 // let array = []
 //  for (let i = num; i > 0; i --) {
 //   input = parseInt(prompt("Enter a number"));
 //   array.push(input)
 //  }
-//  console.log(`Smallest number is: ${Math.min(...array)}`)
+//  console.log(`The smallest number is: ${Math.min(...array)}`)
 
 // let array = []
 //  for (let i = 0; i <= 4; i ++) {
