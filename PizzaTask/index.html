@@ -45,27 +45,20 @@
         <input type="checkbox" name="topping" value="Ground beef" />Ground
         beef<br />
       </div>
+
       <div class="delivery-cont">
         <h2>Select the method of delivery</h2>
-        <input type="radio" name="delivery" value="Home" checked />Delivery
-        home<br />
-        <input type="radio" name="delivery" value="Eat In" />Eat in<br />
-        <input type="radio" name="delivery" value="Pickup" />Pickup food<br />
+        <select id="delivery"> 
+          <option value="0">Delivery Home</option>
+          <option value="1">Eat in</option>
+          <option value="2">Pick up</option>
+         </select>
       </div>
+
       <div class="button-cont">
         <button id="btn" class="btn">Confirm selection</button><br />
-        <div id="chosen-size-res"></div>
-        <br />
-        <div id="selected-toppings-res"></div>
-        <br />
-        <div id="delivery-res"></div>
-        <br />
-        <div id="totalPrice-res"></div>
-        <br />
+        <div id="chosen-size-res"></div><br>
         <button id="btn2" class="btn">Proceed to checkout</button>
-      </div>
-      <div>
-       
       </div>
     </div>
 

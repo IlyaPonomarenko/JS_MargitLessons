@@ -20,7 +20,7 @@ btn.onclick = function () {
       sizePrice += 15.5;
       break;
   }
-
+  //Topping handler
   const toppings = document.getElementsByName("topping");
   let toppingPrice = 0;
   let toppingsSelected = [];
@@ -36,6 +36,7 @@ btn.onclick = function () {
   switch (amountSel) {
     case 0:
       alert("You forgot about toppings!");
+      break;
     case 4:
       console.log("Nothing");
       break;
@@ -56,28 +57,24 @@ btn.onclick = function () {
       break;
   }
   //Chosen delivery method is checked
-  const delivery = document.querySelector(
-    'input[name="delivery"]:checked'
-  ).value;
+  let delivery = document.getElementById("delivery").selectedIndex;
   let deliveryPrice = 0;
-  if (delivery === "Home") {
+  if (delivery === 0) {
     deliveryPrice += 5;
+    delivery = "Home"
+  } else if (delivery === 1){
+    delivery = "Eat in"
+  } else {
+    delivery="Pick up";
   }
   //Total price of orded is calculated
   let totalPrice = sizePrice + toppingPrice + deliveryPrice;
   //Displaying the selected values to the user
   document.querySelector(
     "#chosen-size-res"
-  ).textContent = `Chosen size: for ${size}`;
-  document.querySelector(
-    "#selected-toppings-res"
-  ).textContent = `Selected toppings: ${toppingsSelected.join(", ")}`;
-  document.querySelector(
-    "#delivery-res"
-  ).textContent = `Delivery method: ${delivery}`;
-  document.querySelector(
-    "#totalPrice-res"
-  ).textContent = `Total price: ${totalPrice}€`;
+  ).textContent = `Chosen size: for your pizza is ${size}, 
+  toppings are ${toppingsSelected.join(", ")}, 
+  delivery method is ${delivery} and total price is ${totalPrice}€`;
 
   stateHandle(amountSel);
   orderConfirm();
