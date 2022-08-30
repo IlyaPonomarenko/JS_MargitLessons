@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap" class="container">
+      <div class="radios-cont">
+        <h2>Select the size:</h2>
+
+        <input type="radio" name="size" value="2" checked />For 2, - 7.50€<br />
+        <input type="radio" name="size" value="4" />For 4, - 10.50€<br />
+        <input type="radio" name="size" value="6" />For 6, - 12.50€<br />
+        <input type="radio" name="size" value="8" />For 8, - 15.50€<br />
+      </div>
+      <div class="toppings-cont">
+        <h2>Select toppings (4 are free!):</h2>
+        <input type="checkbox" name="topping" value="Aura cheese" />Aura
+        cheese<br />
+        <input
+          type="checkbox"
+          name="topping"
+          value="Pineapple"
+        />Pineapple<br />
+        <input
+          type="checkbox"
+          name="topping"
+          value="Pepperoni"
+        />Pepperoni<br />
+        <input type="checkbox" name="topping" value="Double cheese" />Double
+        cheese<br />
+        <input type="checkbox" name="topping" value="Onions" />Onions<br />
+        <input type="checkbox" name="topping" value="Chicken" />Chicken<br />
+        <input type="checkbox" name="topping" value="Shrimp" />Shrimp<br />
+        <input type="checkbox" name="topping" value="Oregano" />Oregano<br />
+        <input
+          type="checkbox"
+          name="topping"
+          value="Mozarella"
+        />Mozarella<br />
+        <input type="checkbox" name="topping" value="Ground beef" />Ground
+        beef<br />
+      </div>
+      <div class="delivery-cont">
+        <h2>Select the method of delivery</h2>
+        <input type="radio" name="delivery" value="Home" checked />Delivery
+        home<br />
+        <input type="radio" name="delivery" value="Eat In" />Eat in<br />
+        <input type="radio" name="delivery" value="Pickup" />Pickup food<br />
+      </div>
+      <div class="button-cont">
+        <button id="btn" class="btn">Confirm selection</button><br />
+        <div id="chosen-size-res"></div>
+        <br />
+        <div id="selected-toppings-res"></div>
+        <br />
+        <div id="delivery-res"></div>
+        <br />
+        <div id="totalPrice-res"></div>
+        <br />
+        <button id="btn2" class="btn">Proceed to checkout</button>
+      </div>
+      <div>
+       
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
