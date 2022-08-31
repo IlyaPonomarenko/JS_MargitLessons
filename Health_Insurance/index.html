@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+      <h1 id="first_h2">Health insurance form</h1>
+      <div class="checkboxes">
+      <div>
+        <label for="name-input">Enter your name:</label>
+        <input type="text" id="name" />
+      </div>
+      <div>
+        <label for="age-input">Enter your age:</label>
+        <input type="number" id="age" />
+      </div>
+    </div>
+      <h2>Health conditions:</h2>
+      <p>(if you have none leave unchecked)</p>
+      <div class="checkboxes">
+        <div>
+          <input
+            type="checkbox"
+            name="conditions"
+            id="health-cond1"
+            value="1"
+          />
+          <label for="health-cond1">Hypertension</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="conditions"
+            id="health-cond2"
+            value="2"
+          />
+          <label for="health-cond2">Blood sugar</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="conditions"
+            id="health-cond3"
+            value="3"
+          />
+          <label for="health-cond3">Overweight</label>
+        </div>
+      </div>
+
+      <h2>Bad habits:</h2>
+      <p>(if you have none leave unchecked)</p>
+      <div class="checkboxes">
+        <div>
+          <input type="checkbox" name="badhabits" id="bad-habit1" value="1" />
+          <label for="bad-habit1">Smoking</label>
+        </div>
+        <div>
+          <input type="checkbox" name="badhabits" id="bad-habit2" value="2" />
+          <label for="bad-habit2">Alcohol</label>
+        </div>
+        <div>
+          <input type="checkbox" name="badhabits" id="bad-habit3" value="3" />
+          <label for="bad-habit3">Infrequent exercise</label>
+        </div>
+        <div>
+          <input type="checkbox" name="badhabits" id="bad-habit4" value="4" />
+          <label for="bad-habit4">Drugs</label>
+        </div>
+      </div>
+      <h2>Good habits:</h2>
+      <p>(if you have none leave unchecked)</p>
+      <div class="checkboxes">
+        <div>
+          <input type="checkbox" name="goodhabits" id="good-habit1" value="1" />
+          <label for="bad-habit1">Exercise</label>
+        </div>
+        <div>
+          <input type="checkbox" name="goodhabits" id="good-habit2" value="2" />
+          <label for="bad-habit2">Balanced diet</label>
+        </div>
+        <div>
+          <input type="checkbox" name="goodhabits" id="good-habit3" value="3" />
+          <label for="bad-habit3">7-9 hours of sleep</label>
+        </div>
+        <div>
+          <input type="checkbox" name="goodhabits" id="good-habit4" value="4" />
+          <label for="bad-habit4">Frequent walks</label>
+        </div>
+      </div>
+      <button class="btn" type="submit">Calculate score</button>
+      <p id="result"></p>
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>
