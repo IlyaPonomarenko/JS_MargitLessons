@@ -72,8 +72,8 @@ btn.onclick = function () {
   //Displaying the selected values to the user
   document.querySelector(
     "#chosen-size-res"
-  ).textContent = `Chosen size: for your pizza is ${size}, 
-  toppings are ${toppingsSelected.join(", ")}, 
+  ).textContent = `Chosen size for your pizza is ${size},
+  selected toppings are ${toppingsSelected.join(", ")}, 
   delivery method is ${delivery} and total price is ${totalPrice}€`;
 
   stateHandle(amountSel);

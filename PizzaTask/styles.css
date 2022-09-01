@@ -16,32 +16,47 @@ body {
   position: relative;
 }
 .container {
-  background: #9da7af; /* fallback for old browsers */
-  display: block;
+  background: #9da7af; 
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 35%;
+  
 }
-.chosen-size-res {
-  text-decoration-thickness: 3px;
-}
+
 .radios-cont {
-  padding: 10%;
+  padding: auto;
+  margin-left: 10%;
   
 }
 .toppings-cont {
-  padding: 10%;
+  padding: auto;
+  margin-left: 10%;
+  
 }
 .delivery-cont {
-  padding: 10%;
+  padding: auto;
+  margin-left: 10%;
+  margin-bottom: 10%;
 }
 .button-cont {
-  padding-left: 5%;
-  margin-bottom: 5%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+}
+.result{
+display: flex;
+justify-content: center;
+flex-direction: column;
+margin: 10%;
+font-size: x-large;
+font-weight: bolder;
 }
 .btn {
   margin-bottom: 2%;
-  margin-left: 15%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 7px 30px;
   font-family: inherit;
   font-weight: inherit;
