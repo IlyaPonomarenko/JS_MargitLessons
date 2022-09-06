@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div class="container">
+        <h2>Linear gradient generator</h2>
+        <h2>Colors:</h2>
+        <div class="color-pickers">
+            
+          <input id="input-color" type="color"/>
+          <input id="input-color" type="color">
+        </div>
+        <div class="radios">
+            <h2>Direction:</h2>
+            <table>
+                <tr></tr>
+                <tr class="first-row">
+                    <td><input type="radio" name="row1" id="southEast"><label for="southEast"><img src="\BG_generator\arrows\south_east.svg"></label></td>
+                    <td><input type="radio" name="row1" id="downwards"> <label for="downwards"><img src="\BG_generator\arrows\arrow_downward.svg"></label></td>
+                    <td><input type="radio" name="row1" id="southWest"><label for="southWest"><img src="\BG_generator\arrows\south_west.svg"></label></td>
+                </tr>
+                <tr class="second-row">
+                    <td><input type="radio" name="row1" id="forward"><label for="forward"><img src="\BG_generator\arrows\arrow_forward.svg"></label></td>
+                    <td></td>
+                    <td><input type="radio" name="row1" id="backwards"><label for="backwards"><img src="\BG_generator\arrows\arrow_back.svg"></label></td>
+                </tr>
+                <tr class="third-row">
+                    <td><input type="radio" name="row1" id="northEast"><label for="outward"><img src="\BG_generator\arrows\north_east.svg"></label></td>
+                    <td><input type="radio" name="row1" id="upward"><label for="upward"><img src="\BG_generator\arrows\arrow_upward.svg"></label></td>
+                    <td><input type="radio" name="row1" id="northWest"><label for="northWest"><img src="\BG_generator\arrows\north_west.svg"></label></td>
+                </tr>
+            </table>
+        </div>
+        <div class="CSSoutput">
+            <h2>CSS code:</h2>
+            <h2>result</h2>
+          </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
