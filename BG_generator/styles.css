@@ -1,59 +1,64 @@
-html,
-body {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+html{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-size: cover;
+  background-repeat:no-repeat;
   height: 100%;
-  margin: 0;
-  background: linear-gradient(to right, #FFAAAA, #734C8F)
- 
 }
-.input-color{
+body {
+  margin: 0;
+  background: linear-gradient(to right, #ffaaaa, #734c8f);
+  font-family: "Montserrat", sans-serif;
+  
+}
+.input-color {
   width: 70px;
   height: 40px;
-  margin-top: 20px;
   border: none;
   padding: 0;
 }
 .radios input[type="radio"] {
-    visibility: hidden;
-  }
-  
-.radios label {
-    cursor: pointer;
-    font-family: "Material Icons";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 36px; /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    border: 2px solid;
-    border-radius: 5px;
-  
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-    /* Support for IE. */
-    font-feature-settings: "liga";
-  }
+  visibility: hidden;
+}
 
-.radios input[type="radio"]:checked+label {
+.radios label {
+  cursor: pointer;
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 36px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  border: 2px solid;
+  border-radius: 5px;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+.radios input[type="radio"]:checked + label {
   color: rgba(0, 0, 0, 0.54);
 }
 
 .container {
   background-color: azure;
-  height: 100%;
-  width: 30%;
-  padding: 0;
-  margin: 0;
+  width: 25vw;
+  padding: 2rem;
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
+  
 }
 .color-pickers {
   display: flex;
@@ -63,15 +68,13 @@ body {
 
 h2 {
   display: flex;
-  flex-direction: row;
   justify-content: center;
 }
-.radios {
-  justify-content: center;
-}
+
 table {
   display: flex;
   justify-content: center;
+  margin-right: 14px;
 }
 td {
   margin-top: 5px;
@@ -90,7 +93,9 @@ td {
   display: flex;
   flex-direction: row;
 }
-body {
-  background-color: rgb(59, 59, 59);
+.CSSoutput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
-
