@@ -4,9 +4,8 @@
     font-size: large;
 }
 .wrap{
-    display: block;
-    flex-direction: row;
-    justify-content: flex-start;
+    display: flex;
+    justify-items: auto;
 }
 
 .main-table{
@@ -16,6 +15,7 @@
     min-width: 400px;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
+    margin-left: 10px;
 
 }
 .main-table thead tr{
