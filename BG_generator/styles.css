@@ -21,7 +21,6 @@ body {
 .radios input[type="radio"] {
   visibility: hidden;
 }
-
 .radios label {
   cursor: pointer;
   font-family: "Material Icons";

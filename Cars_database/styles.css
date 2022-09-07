@@ -1,0 +1,38 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+.wrap{
+    display: block;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.main-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+
+}
+.main-table thead tr{
+    background-color: rgb(78, 184, 106);
+    color: white;
+    font-weight: bold;
+}
+.main-table th,
+.main-table td{
+    padding: 12px 15px;
+}
+.main-table tbody tr{
+    border-bottom: 1px solid gainsboro;
+}
+.main-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+.main-table tbody tr:last-of-type{
+    border-bottom: 2px solid rgb(78, 184, 106); ;
+}
