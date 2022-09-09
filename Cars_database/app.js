@@ -1,8 +1,10 @@
 const form = document.querySelector("#form");
 const display = document.querySelector("#display");
-
-form.addEventListener("submit", function (e) {
- let container = [];
+const btn = document.querySelector("#btn");
+const Input = document.querySelector("#sinput");
+const res = document.querySelector("#result");
+let container = [];
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   let entry = {
     licence: document.getElementById("licNum").value,
@@ -14,17 +16,21 @@ form.addEventListener("submit", function (e) {
   };
   container.push(entry);
   document.forms[0].reset();
-            console.log(entry);
-            console.log(container);
-  for (item of container){
-    let tableR = display.getElementsByTagName('tbody')[0].insertRow();
-    tableR.insertCell().textContent = item.licence;
-    tableR.insertCell().textContent = item.maker;
-    tableR.insertCell().textContent = item.model;
-    tableR.insertCell().textContent = item.owner;
-    tableR.insertCell().textContent = item.price;
-    tableR.insertCell().textContent = item.color;
+  let tableR = display.getElementsByTagName("tbody")[0].insertRow();
+  tableR.insertCell().textContent = entry.licence;
+  tableR.insertCell().textContent = entry.maker;
+  tableR.insertCell().textContent = entry.model;
+  tableR.insertCell().textContent = entry.owner;
+  tableR.insertCell().textContent = entry.price;
+  tableR.insertCell().textContent = entry.color;
+});
+
+//Onis helped me out with this one
+btn.addEventListener("click", () => {
+  const match = container.findIndex((car) => car.licence === Input.value);
+  if (match === -1) {
+    res.textContent = `No car found`;
+  } else {
+    res.textContent = `Car by license ${container[match].licence} made by ${container[match].maker} and the owner is ${container[match].owner}`;
   }
- container = [];
-   
 });
