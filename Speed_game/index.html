@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://www.1001fonts.com/aniron-font.html');
+        </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="cover"> 
+    <div class="container">
+        <h1>Gather Lambas Bread!</h1>
+        <h4>You have gathered: <span>0</span></h4>
+        <div class="balls">
+            <div class="circle"><input type="image" class="image_input active" alt=""></div>
+            <div class="circle"><input type="image" class="image_input" alt=""></div>
+            <div class="circle"><input type="image" class="image_input" alt=""></div>
+            <div class="circle"><input type="image" class="image_input" alt=""></div>
+        </div>
+        <button class="startBtn">Start game</button>
+        <button class="endBtn">End game</button>
+    </div>
+    <div class="overlay">
+        <div class="modal">
+          <h2>You lost!</h2>
+          <p id="result">
+            
+          </p>
+          <button class="btn close" id="closeButton">Close</button>
+        </div>
+      </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
