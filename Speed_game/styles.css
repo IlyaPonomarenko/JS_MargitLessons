@@ -1,73 +1,70 @@
-*{
-    padding: 0;
-    margin: 0;
-    font-family: cursive;
-    
+* {
+  padding: 0;
+  margin: 0;
+  font-family: cursive;
 }
-.cover{
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.609)),
-      url(WallpaperDog-20486865.jpg);
-    background-size: cover;
+.cover {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.609)),
+    url(WallpaperDog-20486865.jpg);
+  background-size: cover;
 }
-.container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 17em;
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 17em;
 }
-.container h1,h4{
-    text-align: center;
-    color: #ffff;
+.container h1,
+h4 {
+  text-align: center;
+  color: #ffff;
 }
-.startBtn{
-    width: 6em;
-    margin-left: auto;
-    margin-right: auto;
+.startBtn {
+  width: 6em;
+  margin-left: auto;
+  margin-right: auto;
 }
-.endBtn{
-    width: 6em;
-    margin-left: auto;
-    margin-right: auto;
+.endBtn {
+  width: 6em;
+  margin-left: auto;
+  margin-right: auto;
 }
-.balls{
-    display: inline-flex;
-    justify-content: center;
-    margin: 2em;
+.balls {
+  display: inline-flex;
+  justify-content: center;
+  margin: 2em;
 }
-.circle{
-    border-radius: 50%;
-    width: 138px;
-    height: 142px;
-    background: #4db6a5;
-    margin: 1em;
-    cursor: pointer;
+.circle {
+  border-radius: 50%;
+  width: 138px;
+  height: 142px;
+  background: #4db6a5;
+  margin: 1em;
+  cursor: pointer;
 }
-.image_input{
-    padding-left: 5px;
+.image_input {
+  padding-left: 5px;
 }
-.active.image_input {
-    content: url(/Speed_game/bonus_more_lembas_bread.png);
+.active {
+  content: url(/Speed_game/bonus_more_lembas_bread.png);
 }
-.overlay{
-    display: none;
+.overlay {
+  display: none;
 }
-  .visible.overlay {
-    display: flex;
-    justify-content: center;
-    text-align: center; 
-  }
-  .visible.overlay .modal {
-    background: white;
-    width: 50vw;
-    border-radius: 10px;
-    color: #032330;
-    padding: 3rem;
-    position: absolute;
-    top: 33%;
-    left: 22%;
-  }
-  
-
-  
+.visible.overlay {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.visible.overlay .modal {
+  background: white;
+  width: 50vw;
+  border-radius: 10px;
+  color: #032330;
+  padding: 3rem;
+  position: absolute;
+  top: 33%;
+  left: 22%;
+}
