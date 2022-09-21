@@ -48,17 +48,16 @@ h4 {
   padding-left: 5px;
 }
 .active {
+    background: #bbdd3e;
   content: url(/Speed_game/bonus_more_lembas_bread.png);
 }
 .overlay {
-  display: none;
-}
-.visible.overlay {
+  visibility: hidden;
   display: flex;
   justify-content: center;
   text-align: center;
 }
-.visible.overlay .modal {
+.overlay .modal {
   background: white;
   width: 50vw;
   border-radius: 10px;
