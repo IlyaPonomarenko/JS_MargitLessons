@@ -7,6 +7,7 @@ const refresh = document.querySelector(".btn")
 let scoreCount = 0;
 let active = 0;
 let timer;
+let speed = 1000;
 
 const getRndInt = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -18,7 +19,8 @@ const gameStart = () => {
   let nextActive = newNum(active);
   active = nextActive;
   console.log(active);
-  timer = setTimeout(gameStart, 1000);
+  timer = setTimeout(gameStart, speed);
+  speed = speed -5;
   function newNum(active) {
     let nextActive = getRndInt(0, 3);
     if (nextActive != active) {
