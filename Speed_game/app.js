@@ -1,5 +1,4 @@
 const startBtn = document.querySelector(".startBtn");
-const stopBtn = document.querySelector(".endBtn");
 const circles = document.querySelectorAll(".circle");
 const score = document.querySelector(".score");
 const overlay = document.querySelector(".overlay");
@@ -101,6 +100,5 @@ const refreshPage = () => {
 };
 
 startBtn.addEventListener("click", gameStart);
-stopBtn.addEventListener("click", gameEnd);
 refresh.addEventListener("click", refreshPage);
 infoButton.addEventListener("click", playInfoAudio);
