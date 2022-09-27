@@ -95,6 +95,7 @@ const clickDiv = (e) => {
 circles.forEach((circle, e) => {
   circle.addEventListener("click", () => clickDiv(e));
 });
+
 const refreshPage = () => {
   window.location.reload();
 };

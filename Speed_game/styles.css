@@ -57,11 +57,19 @@ h4 {
   content: url(/images/bonus_more_lembas_bread.png);
   box-shadow: 10px 5px 30px #ffffff55;
 }
-.overlay {
+.overlay{
   visibility: hidden;
   display: flex;
   justify-content: center;
   text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  color: #333;
 }
 .close {
   margin-top: 3em;
