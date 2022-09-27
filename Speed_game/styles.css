@@ -7,27 +7,30 @@
   width: 100%;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.609)),
-    url(WallpaperDog-20486865.jpg);
+    url(/images/WallpaperDog-20486865.jpg);
   background-size: cover;
 }
 .container {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-top: 17em;
+  padding-top: 8em;
 }
 .container h1,
 h4 {
   text-align: center;
   color: #ffff;
 }
-.startBtn {
+.startBtn, .endBtn{
   width: 6em;
+  font-size: 1em;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 5px;
 }
-.endBtn {
-  width: 6em;
+.infoBtn{
+  width: 11em;
+  font-size: 1em;
   margin-left: auto;
   margin-right: auto;
 }
@@ -37,25 +40,31 @@ h4 {
   margin: 2em;
 }
 .circle {
+  pointer-events: none;
   border-radius: 50%;
   width: 138px;
   height: 142px;
   background: #4db6a5;
   margin: 1em;
   cursor: pointer;
+  
 }
 .image_input {
   padding-left: 5px;
 }
 .active {
     background: #bbdd3e;
-  content: url(/Speed_game/bonus_more_lembas_bread.png);
+  content: url(/images/bonus_more_lembas_bread.png);
+  box-shadow: 10px 5px 30px #ffffff55;
 }
 .overlay {
   visibility: hidden;
   display: flex;
   justify-content: center;
   text-align: center;
+}
+.close{
+  margin-top: 3em;
 }
 .overlay .modal {
   background: white;
@@ -66,4 +75,5 @@ h4 {
   position: absolute;
   top: 33%;
   left: 22%;
+  padding-bottom: 10px;
 }
