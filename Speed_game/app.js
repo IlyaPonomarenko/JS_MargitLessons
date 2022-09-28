@@ -6,13 +6,13 @@ const refresh = document.querySelector(".btn");
 const infoButton = document.querySelector(".infoBtn");
 const finalResult = document.querySelector("#result");
 const startAudio = new Audio(
-  "/sounds/mixkit-cool-interface-click-tone-2568.wav"
+  "./sounds/mixkit-cool-interface-click-tone-2568.wav"
 );
 const endAudio = new Audio(
-  "/sounds/mixkit-negative-tone-interface-tap-2569.wav"
+  "./sounds/mixkit-negative-tone-interface-tap-2569.wav"
 );
 const infoAudio = new Audio(
-  "/sounds/lembas-elvish-waybread-one-small-bite-is-enough-to-fill-the-stomach-of-a-grown-man.wav"
+  "./sounds/lembas-elvish-waybread-one-small-bite-is-enough-to-fill-the-stomach-of-a-grown-man.wav"
 );
 let scoreCount = 0;
 let active = 0;

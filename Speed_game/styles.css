@@ -7,7 +7,7 @@
   width: 100%;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.609)),
-    url(/images/WallpaperDog-20486865.jpg);
+    url(./images/WallpaperDog-20486865.jpg);
   background-size: cover;
 }
 .container {
@@ -54,7 +54,7 @@ h4 {
 }
 .active {
   background: #bbdd3e;
-  content: url(/images/bonus_more_lembas_bread.png);
+  content: url(./images/bonus_more_lembas_bread.png);
   box-shadow: 10px 5px 30px #ffffff55;
 }
 .overlay{

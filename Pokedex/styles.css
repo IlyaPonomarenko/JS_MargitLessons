@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:wght@100&display=swap');
+:root{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background: url(pictures/574726.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+.row-1{
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: 120px 120px 120px;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    border: 1px  #fff;
+    border-radius: 5px;
+    background: #fff;
+}
+.card-text{
+    display: flex;
+    justify-content: center;
+    background: #d3cdcd;
+    background-size: cover;
+    border: 1px solid #d3cdcd;
+    border-radius: 4px;
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+}
+.card-text h2{
+    text-align: center;
+}
+.card-icon{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.card-icon img{
+    width: 4em;
+    height: 4em;
+    padding: 1em;
+}
