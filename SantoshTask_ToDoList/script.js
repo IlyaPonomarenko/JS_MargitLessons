@@ -3,7 +3,7 @@ const taskNameInput = todoForm['task']
 const taskDescInput = todoForm['desc']
 const tasksCont = document.querySelector(".tasks")
 
-const taskArr = JSON.parse(localStorage.getItem("CurrentTasks"))
+const taskArr = JSON.parse(localStorage.getItem("CurrentTasks")) || []
 
 const createTask = (task, desc) => {
     taskArr.push({
@@ -16,6 +16,7 @@ const createTask = (task, desc) => {
 
 const addTask = ({task,desc}) => {
     const taskdiv = document.createElement("div")
+    taskdiv.classList.add("indTask")
     const taskname = document.createElement("h2")
     const taskdesc = document.createElement("p")
 
