@@ -42,17 +42,23 @@
     background-color: #e6e6e6;
   }
   
-  .tasks div {
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .tasks div * {
+  .tasks li * {
     margin: 5px;
   }
   .indTask{
-    &:before{
-      
-    }
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    list-style: none;
   }
+  .indTask span{
+    position: absolute;
+    margin-left: 13em;
+    border: 2px solid;
+    background-color: rgba(240, 40, 40, 0.892);
+    width: 22px;
+    margin-right: 21px;
+    color: rgb(0, 0, 0);
+  }
+
+  
