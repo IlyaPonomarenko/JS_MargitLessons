@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  main {
+    width: 80%;
+    margin: 15px auto 0;
+  }
+  
+  #todoForm input[name="name"] {
+    grid-area: name;
+  }
+  #todoForm input[name="desc"] {
+    grid-area: age;
+  }
+  #todoForm button {
+    grid-area: button;
+  }
+  
+  #todoForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "name name"
+      "age roll"
+      "button button";
+  }
+  
+  #todoForm * {
+    margin: 7px;
+    padding: 7px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  #todoForm .btn {
+    outline: none;
+    background-color: #6495ed;
+    color: white;
+    border: 5px solid transparent;
+    cursor: pointer;
+  }
+  
+  #todoForm input {
+    border: 3px solid #6495ed;
+    outline: none;
+  }
+  
+  #todoForm input:focus {
+    border: 3px solid #367bfa;
+  }
+  
+  #todoForm button:active {
+    border-color: #367bfa;
+  }
+  
+  .tasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid gray;
+    background-color: #ebebeb;
+    color: #2f2f2f;
+    border-radius: 15px;
+  }
+  
+  .tasks div {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .tasks div * {
+    margin: 5px;
+  }
