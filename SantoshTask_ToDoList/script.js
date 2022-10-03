@@ -17,19 +17,14 @@ const createTask = (task, desc) => {
 const addTask = ({task,desc}) => {
     const taskli = document.createElement("li")
     taskli.classList.add("indTask")
-    const deletetask = document.createElement("span")
     const taskname = document.createElement("h2")
     const taskdesc = document.createElement("p")
-
-    deletetask.innerText = "X"
     taskname.innerText = task;
     taskdesc.innerText = "Description: " + desc;
-
     tasksCont.appendChild(taskli);
-    taskli.append(deletetask, taskname, taskdesc);
+    taskli.append(taskname, taskdesc);
 
 }
-
 taskArr.forEach(addTask)
 todoForm.onsubmit = (e) =>{
     e.preventDefault();
