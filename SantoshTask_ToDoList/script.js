@@ -1,9 +1,10 @@
 const todoForm = document.querySelector("#todoForm");
-const taskNameInput = todoForm['task']
-const taskDescInput = todoForm['desc']
-const tasksCont = document.querySelector(".tasks")
+const taskNameInput = todoForm['task'];
+const taskDescInput = todoForm['desc'];
+const tasksCont = document.querySelector(".tasks");
+const deletebtn = document.querySelector(".deletebtn");
 
-const taskArr = JSON.parse(localStorage.getItem("CurrentTasks")) || []
+const taskArr = JSON.parse(localStorage.getItem("CurrentTasks")) || [];
 
 const createTask = (task, desc) => {
     taskArr.push({
@@ -33,3 +34,9 @@ todoForm.onsubmit = (e) =>{
     taskNameInput.value="";
     taskDescInput.value="";
 }
+
+deletebtn.addEventListener("click", () =>{
+    localStorage.clear();
+    window.location.reload()
+
+})
