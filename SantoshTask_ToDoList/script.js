@@ -1,9 +1,10 @@
 const todoForm = document.querySelector("#todoForm");
-const taskNameInput = todoForm['task']
-const taskDescInput = todoForm['desc']
-const tasksCont = document.querySelector(".tasks")
+const taskNameInput = todoForm['task'];
+const taskDescInput = todoForm['desc'];
+const tasksCont = document.querySelector(".tasks");
+const deletebtn = document.querySelector(".deletebtn");
 
-const taskArr = JSON.parse(localStorage.getItem("CurrentTasks")) || []
+const taskArr = JSON.parse(localStorage.getItem("CurrentTasks")) || [];
 
 const createTask = (task, desc) => {
     taskArr.push({
@@ -17,19 +18,14 @@ const createTask = (task, desc) => {
 const addTask = ({task,desc}) => {
     const taskli = document.createElement("li")
     taskli.classList.add("indTask")
-    const deletetask = document.createElement("span")
     const taskname = document.createElement("h2")
     const taskdesc = document.createElement("p")
-
-    deletetask.innerText = "X"
     taskname.innerText = task;
     taskdesc.innerText = "Description: " + desc;
-
     tasksCont.appendChild(taskli);
-    taskli.append(deletetask, taskname, taskdesc);
+    taskli.append(taskname, taskdesc);
 
 }
-
 taskArr.forEach(addTask)
 todoForm.onsubmit = (e) =>{
     e.preventDefault();
@@ -38,3 +34,9 @@ todoForm.onsubmit = (e) =>{
     taskNameInput.value="";
     taskDescInput.value="";
 }
+
+deletebtn.addEventListener("click", () =>{
+    localStorage.clear();
+    window.location.reload()
+
+})
