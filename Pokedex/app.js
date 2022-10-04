@@ -9,7 +9,7 @@ const getBtnValue = async (e) => {
   let amountOfPokes = genData.pokemon_species.length;
   console.log(genNum);
   console.log(amountOfPokes);
-  for (let i = 0; i <= amountOfPokes; i++) {
+  for (let i = 0; i < amountOfPokes; i++) {
     callDatainOrder(genNum, i);
   }
 };
