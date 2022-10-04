@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Roboto:wght@100&display=swap');
 :root{
     font-family: 'Roboto', sans-serif;
+    font-size: 1em;
 }
 body{
     background: url(pictures/574726.jpg) no-repeat center center fixed; 
@@ -32,6 +33,7 @@ body{
 h1{
     display: flex;
     justify-content: center;
+    font-size: 3em;
 }
 .card{
     border: 1px  #fff;
@@ -51,11 +53,11 @@ h1{
 }
 .card-text h2{
     text-align: center;
-    margin: 2px;
+    margin-top: 9px;
 }
 .card-text p{
     text-align: center;
-    margin: 3px;
+    margin: 20px;
 }
 .card-icon{
     display: flex;
