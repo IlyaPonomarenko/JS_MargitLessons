@@ -1,11 +1,15 @@
 const row = document.querySelector(".row-1");
 const btn_gen2 = document.querySelector(".gen1");
 const genButtons = document.querySelectorAll(".button");
+const searchIn = document.querySelector("#searchIn")
+
+let genData = []
 
 const getBtnValue = async (e) => {
   row.innerHTML = "";
   const genNum = e.target.value;
-  const genData = await getGen(genNum);
+  genData = await getGen(genNum);
+  
   let amountOfPokes = genData.pokemon_species.length;
   for (let i = 0; i < amountOfPokes; i++) {
     callDatainOrder(genNum, i);
@@ -29,8 +33,8 @@ const getSpecies = async (speciesUrl) => {
 };
 const getPokemonData = async (pokemonDataUrl) => {
   const responce = await fetch(pokemonDataUrl);
-  const pokeData = await responce.json();
-  return pokeData;
+  const GenPokeData = await responce.json();
+  return GenPokeData;
 };
 
 const callDatainOrder = async (genNum, i) => {
@@ -57,3 +61,6 @@ const createCard = (pokeData) => {
   pokemonCard.innerHTML = pokemonInnerHtml;
   row.appendChild(pokemonCard);
 };
+
+searchIn.addEventListener("input", () => {
+})
