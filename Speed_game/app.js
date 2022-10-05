@@ -65,6 +65,7 @@ const gameStart = () => {
 };
 const gameEnd = () => {
   playAudioEnd();
+  
   circles.forEach((circle) => {
     circle.classList.remove("active");
   });
@@ -77,7 +78,6 @@ const gameEnd = () => {
   } else {
     finalResult.textContent = `Your final score is ${scoreCount}. Give it another try!`;
   }
-
   overlay.style.visibility = "visible";
 };
 
