@@ -1,21 +1,22 @@
 const row = document.querySelector(".row-1");
 const btn_gen2 = document.querySelector(".gen1");
 const genButtons = document.querySelectorAll(".button");
-const searchIn = document.querySelector("#searchIn")
+const searchIn = document.querySelector("#searchIn");
 
-let genData = []
+let searchValue;
+let AllPokemonData = [];
+let currentPokes = [];
 
 const getBtnValue = async (e) => {
+  currentPokes= [];
   row.innerHTML = "";
   const genNum = e.target.value;
-  genData = await getGen(genNum);
-  
+  const genData = await getGen(genNum);
   let amountOfPokes = genData.pokemon_species.length;
   for (let i = 0; i < amountOfPokes; i++) {
     callDatainOrder(genNum, i);
   }
 };
-
 for (const genButton of genButtons) {
   genButton.addEventListener("click", getBtnValue);
 }
@@ -41,6 +42,7 @@ const callDatainOrder = async (genNum, i) => {
   const genData = await getGen(genNum);
   const speciesData = await getSpecies(genData.pokemon_species[i].url);
   const pokeData = await getPokemonData(speciesData.varieties[0].pokemon.url);
+  currentPokes.push(pokeData)
   createCard(pokeData);
 };
 
@@ -48,19 +50,42 @@ const createCard = (pokeData) => {
   const pokemonCard = document.createElement("div");
   pokemonCard.classList.add("card");
   const { name, sprites, types } = pokeData;
-  const type = types[0].type.name;
   const pokemonInnerHtml = ` 
           <div class="card-icon">
             <img src="${sprites.other.home.front_default}" alt="${name}">
           </div>
          <div class="card-text">
             <h2>${name}</h2>
-            <p>Type: ${type}</p>
+             ${getType(types)}
          </div>
     `;
   pokemonCard.innerHTML = pokemonInnerHtml;
   row.appendChild(pokemonCard);
 };
+const getType = (types) =>{
+  let typeOfPoke=""; 
+  types.forEach(slot => {
+    typeOfPoke += `<p>${slot.type.name}</p>`
+  });
+  console.log(typeOfPoke)
+  return typeOfPoke
+}
+const searchPokemon = () => {
+  row.innerHTML = "";
+  searchValue = searchIn.value;  
+  if (searchValue.length <= 1) {
+    for(const poke of currentPokes){
+      createCard(poke)
+    }
+    return;
+  }
+  const filteredData = currentPokes.filter((pokemon) => {
+    return pokemon.name.toLowerCase().includes(searchValue);
+  });
+  for(const poke of filteredData){
+   createCard(poke);
+  }
+  
+};
 
-searchIn.addEventListener("input", () => {
-})
+searchIn.addEventListener("input", searchPokemon);
