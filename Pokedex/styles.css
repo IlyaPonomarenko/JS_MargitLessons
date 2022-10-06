@@ -18,12 +18,10 @@ body{
 .button{
 margin: 0 10px 0 10px;
   background-color: #ffffff;
-  border-radius: 100px;
-  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  border-radius: 20px;
   color: rgb(0, 0, 0);
   cursor: pointer;
   display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
   padding: 7px 20px;
   text-align: center;
   text-decoration: none;
@@ -37,7 +35,7 @@ margin: 0 10px 0 10px;
 }
 .button:hover {
   box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
-  transform: scale(1.05) rotate(-1deg);
+  transform: scale(1.05) rotate(1deg);
 }
 
 .search-container{
@@ -46,6 +44,12 @@ margin: 0 10px 0 10px;
     justify-content: center;
     flex-direction: row;
 }
+.search{
+    border: 1.5px solid rgba(44, 187, 99, 0.704);
+    font-size: 20px;
+    line-height: 40px;
+}
+
 .row-1{
     display: grid;
     grid-gap: 8px;
@@ -59,14 +63,14 @@ h1{
     font-size: 3em;
 }
 .card{
-    border: 1px  #fff;
-    border-radius: 5px;
+    border: 3px  solid  rgba(44, 187, 99, 0.488);
+    border-radius: 20px;
     background: #fff;
 }
 .card:hover {
     box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
     transform: scale(1.15) rotate(-1deg);
-    transition-duration: 300ms;
+    transition: all 250ms;
   }
 .card-text{
     display: flex;
@@ -77,21 +81,30 @@ h1{
 }
 .card-text h2{
     text-align: center;
-    margin-top: -18px;
-    margin-bottom: 0;
+    margin-top: -4px;
+    margin-bottom: 15px;
 }
 .card-text p{
     text-align: center;
-    margin: 20px;
+    margin: 0px;
+    margin-bottom: 1em;
 }
 .card-icon{
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
     margin-top: 10px;
 }
 .card-icon img{
     padding: 1em;
     width: 8em;
     height: 8em;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    margin-bottom: 1em;
+}
+.icon{
+    width: 45px;
 }

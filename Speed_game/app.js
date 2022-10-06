@@ -91,6 +91,7 @@ const clickDiv = (e) => {
     gameEnd();
   }
 };
+
 circles.forEach((circle, e) => {
   circle.addEventListener("click", () => clickDiv(e));
 });

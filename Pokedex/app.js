@@ -4,7 +4,6 @@ const genButtons = document.querySelectorAll(".button");
 const searchIn = document.querySelector("#searchIn");
 
 let searchValue;
-let AllPokemonData = [];
 let currentPokes = [];
 
 const getBtnValue = async (e) => {
@@ -56,7 +55,9 @@ const createCard = (pokeData) => {
           </div>
          <div class="card-text">
             <h2>${name}</h2>
+            <div class="icons">
              ${getType(types)}
+             </div>
          </div>
     `;
   pokemonCard.innerHTML = pokemonInnerHtml;
@@ -65,15 +66,16 @@ const createCard = (pokeData) => {
 const getType = (types) =>{
   let typeOfPoke=""; 
   types.forEach(slot => {
-    typeOfPoke += `<p>${slot.type.name}</p>`
+    typeOfPoke += `
+    <img class="icon" src="icons/${slot.type.name}.png">
+    `
   });
-  console.log(typeOfPoke)
   return typeOfPoke
 }
 const searchPokemon = () => {
   row.innerHTML = "";
   searchValue = searchIn.value;  
-  if (searchValue.length <= 1) {
+  if (searchValue.length <= 0) {
     for(const poke of currentPokes){
       createCard(poke)
     }
