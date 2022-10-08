@@ -28,8 +28,6 @@ margin: 0 10px 0 10px;
   transition: all 250ms;
   border: 0;
   font-size: 16px;
-  user-select: none;
-  -webkit-user-select: none;
   touch-action: manipulation;
 
 }
@@ -48,6 +46,8 @@ margin: 0 10px 0 10px;
     border: 1.5px solid rgba(44, 187, 99, 0.704);
     font-size: 20px;
     line-height: 40px;
+    border-radius: 20px;
+    text-align: center;
 }
 
 .row-1{
